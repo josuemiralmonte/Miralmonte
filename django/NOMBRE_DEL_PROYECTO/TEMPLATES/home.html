@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+ <!--Esta línea le dice a django que usaremos lo el contenido de static -->
+{% load static %}
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primer Proyecto Django</title>
+    <!-- Enlace a la hoja de estilos estatica -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
@@ -15,10 +19,14 @@
         <section>
             <h2>Página de Inicio</h2>
             <p>Bienvenido al proyecto. Esta página está servida dinámicamente desde una vista de Django.</p>
+            
+            <!-- Imagen estatica cargada con Django -->
+            <img src="{% static 'images/logo.png' %}" alt="Logo del proyecto">
+
             <ul>
                 <li>Entorno virtual con Pipenv</li>
                 <li>Controlador de versiones Git</li>
-                <li>Vistas y plantillas configuradas</li>
+                <li>Vistas, plantillas y archivos estáticos</li>
             </ul>
         </section>
     </main>
@@ -26,5 +34,8 @@
     <footer>
         <p>&copy; 2026 - Desarrollo Web en Entorno Servidor</p>
     </footer>
+
+    <!-- Script estatico de comprobacion -->
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
