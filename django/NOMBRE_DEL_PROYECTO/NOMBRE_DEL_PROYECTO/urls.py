@@ -15,14 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,  include #step 14 adds include
 #Step 2 importing the logic of the file views 
 from . import views
 
 #In step 2, this homepage has to be defined to have access to it, in order to do that, we set up URL routing in 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage),  
-]
+    path('', views.homepage),
+
+    #step 14 adds this path
+    path('escaparate/', include('escaparate.urls')),  
+]  
+
 
 
