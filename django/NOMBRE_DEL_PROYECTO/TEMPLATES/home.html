@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <!--Esta línea le dice a django que usaremos lo el contenido de static -->
+ <!--This {% thing says to django that we will use the content from static -->
 {% load static %}
 <html lang="es">
 <head>
@@ -20,7 +20,7 @@
             <h2>Página de Inicio</h2>
             <p>Bienvenido al proyecto. Esta página está servida dinámicamente desde una vista de Django.</p>
             
-            <!-- Imagen estatica cargada con Django -->
+            <!-- image loaded  -->
             <img src="{% static 'images/logo.png' %}" alt="Logo del proyecto">
 
             <ul>
@@ -35,7 +35,7 @@
         <p>&copy; 2026 - Desarrollo Web en Entorno Servidor</p>
     </footer>
 
-    <!-- Script estatico de comprobacion -->
+    <!-- Checking that the static Script works -->
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
